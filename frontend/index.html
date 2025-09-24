@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager API Demo</h1>
+        <div class="message" id="message"></div>
+
+        <div class="auth-toggle">
+            <button id="show-login">Login</button>
+            <button id="show-register">Register</button>
+        </div>
+
+        <form id="login-form" class="auth-form active">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+
+        <form id="register-form" class="auth-form" style="display:none;">
+            <h2>Register</h2>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

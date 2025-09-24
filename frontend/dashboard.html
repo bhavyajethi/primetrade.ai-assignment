@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>User Dashboard</h1>
+            <p>Welcome, <span id="user-email"></span>! Role: <span id="user-role"></span></p>
+            <button id="logout-btn">Log Out</button>
+        </header>
+        
+        <div class="message" id="message"></div>
+        
+        <h2>Create New Task</h2>
+        <form id="create-task-form">
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <textarea id="task-description" placeholder="Task Description (Optional)"></textarea>
+            <button type="submit">Create Task</button>
+        </form>
+
+        <h2>Your Tasks</h2>
+        <ul id="tasks-list">
+            </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

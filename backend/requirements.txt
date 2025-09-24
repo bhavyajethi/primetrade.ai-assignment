@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+sqlalchemy
+python-dotenv
+passlib[bcrypt] # Password hashing (Bcrypt)
+python-jose[cryptography] # JWT handling
+mysqlclient # Python connector for MySQL
+pymysql # Alternative MySQL connector (pure Python)
+alembic # For database migrations (good practice for scalability)
+pydantic-settings
+email-validator
+python-multipart # For handling form data (if needed)

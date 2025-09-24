@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache
+.venv
+venv/
+env/
+.env # CRITICAL: This file contains database and JWT secrets
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Database files (if local DB files are created)
+*.sqlite
+*.db
+
+# Uvicorn/FastAPI startup files (optional, but good practice)
+*.log
+
+# Dependency folder (if you decided to keep a separate environment folder)
+# /backend/db/__pycache__/  (already covered by __pycache__/)
+
+# Frontend specific ignore (usually minimal for vanilla JS)
+# None needed here unless you add complex tooling
