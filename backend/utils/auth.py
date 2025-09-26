@@ -55,7 +55,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
 
 def require_role(required_role: str):
     """
-    Dependency function for Role-Based Access Control (RBAC).
+    Function for Role-Based Access Control (RBAC).
     Usage: Depends(require_role("admin"))
     """
     def role_checker(current_user: crud.models.User = Depends(get_current_user)):

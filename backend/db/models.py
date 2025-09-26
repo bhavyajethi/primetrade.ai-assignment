@@ -39,6 +39,7 @@ class Task(Base):
     is_completed = Column(Boolean, default=False)
     created_at = Column(DateTime, default=datetime.utcnow)
     
+    
     # Foreign Key to associate the task with a user
     owner_id = Column(Integer, ForeignKey("users.id"))
     owner = relationship("User", back_populates="tasks")

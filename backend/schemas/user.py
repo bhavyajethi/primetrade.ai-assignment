@@ -1,6 +1,7 @@
-from pydantic import BaseModel, EmailStr
+import re
+from pydantic import BaseModel, EmailStr, field_validator
 
-# --- Base Schemas ---
+#  Base Schemas 
 
 class UserBase(BaseModel):
     email: EmailStr
@@ -8,15 +9,30 @@ class UserBase(BaseModel):
 class RoleBase(BaseModel):
     name: str
 
-# --- Schemas for Creating/Logging In ---
+#  Schemas for Creating/Logging In 
 
-class UserCreate(UserBase):
+class UserCreate(BaseModel):
+    email: str
     password: str
+
+    @field_validator('password')
+    def validate_password(cls, v):
+        if len(v) < 8:
+            raise ValueError('Password must be at least 8 characters long')
+        if not re.search(r'[A-Z]', v):
+            raise ValueError('Password must contain at least one uppercase letter')
+        if not re.search(r'[a-z]', v):
+            raise ValueError('Password must contain at least one lowercase letter')
+        if not re.search(r'\d', v):
+            raise ValueError('Password must contain at least one digit')
+        if not re.search(r'[!@#$%^&*(),.?":{}|<>]', v):
+            raise ValueError('Password must contain at least one special character')
+        return v
 
 class UserLogin(UserBase):
     password: str
 
-# --- Response Schemas ---
+#  Response Schemas 
 
 class Role(RoleBase):
     id: int
@@ -33,7 +49,7 @@ class User(UserBase):
         # Use from_attributes for SQLAlchemy compatibility (formerly orm_mode = True)
         from_attributes = True
 
-# --- Token Schemas ---
+#  Token Schemas 
 
 class Token(BaseModel):
     access_token: str

@@ -3,7 +3,7 @@ from db import models
 from schemas import user as user_schemas, entity as entity_schemas
 from utils import security
 
-# --- USER CRUD OPERATIONS ---
+#USER CRUD OPERATIONS
 
 def get_user_by_email(db: Session, email: str):
     """Retrieves a user by their email address."""
@@ -30,7 +30,7 @@ def create_user(db: Session, user: user_schemas.UserCreate, role_name: str = "us
     db.refresh(db_user)
     return db_user
 
-# --- TASK CRUD OPERATIONS (Secondary Entity) ---
+#TASK CRUD OPERATIONS (Secondary Entity)
 
 def create_task(db: Session, task: entity_schemas.TaskCreate, user_id: int):
     """Creates a new task associated with a specific user."""

@@ -57,7 +57,7 @@ h1, h2 {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Include padding in element's total width */
+    box-sizing: border-box; 
 }
 
 .auth-form button, #logout-btn, #create-task-form button {
