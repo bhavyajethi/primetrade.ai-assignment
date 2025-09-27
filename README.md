@@ -1,10 +1,10 @@
-# 📌 Backend Developer (Intern) Assignment - Scalable REST API
+# Backend Developer (Intern) Assignment - Scalable REST API
 
 This repository contains the solution for the Backend Developer Internship assignment, which required building a secure, scalable REST API with JWT authentication, Role-Based Access Control (RBAC), and a supportive frontend UI, delivered within a 3-day constraint.
 
 ---
 
-## 🚀 Key Features and Deliverables
+## Key Features and Deliverables
 
 | Requirement | Status | Implementation Details |
 | :--- | :--- | :--- |
@@ -19,7 +19,7 @@ This repository contains the solution for the Backend Developer Internship assig
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Backend:** Python 3.10+, FastAPI
 * **Database:** MySQL (via SQLAlchemy)
@@ -29,7 +29,7 @@ This repository contains the solution for the Backend Developer Internship assig
 
 ---
 
-## ⚙️ Setup and Running Locally
+## Setup and Running Locally
 
 Follow these steps to get the API and UI running on your local machine.
 
@@ -71,7 +71,7 @@ Follow these steps to get the API and UI running on your local machine.
 
 ---
 
-## 🛡️ Security and RBAC Testing Guide
+## Security and RBAC Testing Guide
 
 To fully test the security features:
 
