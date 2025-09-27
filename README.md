@@ -47,19 +47,19 @@ Follow these steps to get the API and UI running on your local machine.
   
 ### 3. Backend Setup
 #### 1) Create Virtual Environment & Install Dependencies
-python -m venv venv
-source venv/bin/activate # On Windows: venv\Scripts\activate
-pip install -r backend/requirements.txt
+- python -m venv venv
+- source venv/bin/activate # On Windows: venv\Scripts\activate
+- pip install -r backend/requirements.txt
 
 
 #### 2) Configure Environment Variables
-Navigate to the backend/ directory and copy the template file to create the necessary .env file:
-Open `backend/.env` and replace all placeholder values (DB credentials, SECRET_KEY) with your actual local configuration.
+- Navigate to the backend/ directory and copy the template file to create the necessary .env file:
+- Open `backend/.env` and replace all placeholder values (DB credentials, SECRET_KEY) with your actual local configuration.
 
 #### 3) Run the API Server
-The first run will automatically create the database tables and necessary user/admin roles.
-uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
-The API will now be live at http://localhost:8000.
+- The first run will automatically create the database tables and necessary user/admin roles.
+- uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
+- The API will now be live at http://localhost:8000.
 
 ---
 
